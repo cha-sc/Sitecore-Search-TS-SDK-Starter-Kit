@@ -56,7 +56,7 @@ export default function RootLayout({
                 apiKey={SEARCH_CONFIG.apiKey}
                 publicSuffix={true}
               >
-                <SEOWidget rfkId={'demo_search_seo'} />
+                {/* <SEOWidget rfkId={'demo_search_seo'} /> */}
                 <Header />
                 <main className="w-full m-auto pt-[100px] min-h-[700px] bg-white dark:bg-gray-700">
                   {children}

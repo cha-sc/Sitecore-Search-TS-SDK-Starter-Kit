@@ -51,8 +51,11 @@ const ArticleHorizontalItemCard = ({ className = '', article, onItemClick, index
           <ArticleCard.Title className="text-base">{article.name || article.title}</ArticleCard.Title>
         </a>
         <ArticleCard.Subtitle className="mt-3 text-sm text-gray-600 dark:text-gray-300 h-[100px] overflow-hidden">
-          {article.subtitle}
+          {article.description}
         </ArticleCard.Subtitle>
+        <ArticleCard.ArticleCardContent className="mt-3 text-sm text-gray-600 dark:text-gray-300 text-right">
+          {article.type} - {article.subtype}
+        </ArticleCard.ArticleCardContent>
       </div>
     </ArticleCard.Root>
   );
