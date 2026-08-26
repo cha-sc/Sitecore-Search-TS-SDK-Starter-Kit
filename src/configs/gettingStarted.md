@@ -16,6 +16,14 @@ Scroll to the bottom, click Add Suggestion Option
     Grouping Analyzer: Shingle Generator
     Match Analyzer: Ngram Based Matching
 
+Click save. Click publish.
+
+Click Sorting Options, click Add Sorting Option
+
+    Display Name: Featured
+    API Name: featured_desc
+    Sort: descending
+
 Click save. Click publish. Click to reindex content.
 
 Then go to Widgets, click Add Widget
@@ -39,5 +47,21 @@ Then go to Widgets, click Add Widget
         Widget ID: search_home_hightlight_articles
 
     Click Publish.
+
+    Create SEO
+
+        Widget Type: SEO
+        Name: SEO
+        Widget ID: demo_search_seo
+
+        Make sure a default variantion was created, may need to refresh the Widget Variations page.
+
+        Edit Widget Settings
+
+        Appearance: SEO Style
+
+    Click Publish.
+
+    Click Search Results, edit default variation, settings, sorting options, enable featured_desc. Publish.
 
 This should put the two required widgets and the required Suggestion compare for this project into your configuration.
