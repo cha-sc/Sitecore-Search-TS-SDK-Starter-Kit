@@ -22,7 +22,7 @@ const Filter = () => {
         <h3 className="text-sm md:text-base font-semibold">Filters</h3>
         <button
           onClick={onClearFilters}
-          className="text-sm font-medium text-gray-800 dark:text-gray-100 underline text-opacity-75 hover:text-gray-900 focus:outline-gray-900"
+          className="text-sm font-medium text-gray-800 underline text-opacity-75 hover:text-gray-900 focus:outline-gray-900"
         >
           Clear Filters
         </button>

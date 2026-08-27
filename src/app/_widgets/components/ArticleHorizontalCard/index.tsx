@@ -22,7 +22,7 @@ const ArticleHorizontalItemCard = ({ className = '', article, onItemClick, index
   return (
     <ArticleCard.Root
       key={article.id}
-      className={`group flex flex-row p-4 my-4 flex-nowrap max-h-52 w-full relative border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-lg hover:scale-105 hover:transition-all hover:ease-linear	hover:duration-300 focus-within:scale-105 focus-within:transition-all focus-within:ease-linear focus-within:duration-300 focus-within:hover:shadow-lg ${className}`}
+      className={`group flex flex-row p-4 my-4 flex-nowrap max-h-52 w-full relative border border-gray-300 rounded-md hover:shadow-lg hover:scale-105 hover:transition-all hover:ease-linear	hover:duration-300 focus-within:scale-105 focus-within:transition-all focus-within:ease-linear focus-within:duration-300 focus-within:hover:shadow-lg ${className}`}
     >
       <div className="w-[25%] flex-none overflow-hidden bg-gray-200 ">
         <Image
@@ -50,7 +50,7 @@ const ArticleHorizontalItemCard = ({ className = '', article, onItemClick, index
           <span aria-hidden="true" className="absolute inset-0"></span>
           <ArticleCard.Title className="text-base">{article.name || article.title}</ArticleCard.Title>
         </a>
-        <ArticleCard.Subtitle className="mt-3 text-sm text-gray-600 dark:text-gray-300 h-[100px] overflow-hidden">
+        <ArticleCard.Subtitle className="mt-3 text-sm text-gray-600 h-[100px] overflow-hidden">
           {article.subtitle}
         </ArticleCard.Subtitle>
       </div>

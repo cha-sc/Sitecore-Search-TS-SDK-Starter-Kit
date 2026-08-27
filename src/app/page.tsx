@@ -18,7 +18,7 @@ const Home = (): JSX.Element => {
             defaultKeyphrase={DEFAULT_QUESTION}
             defaultRelatedQuestions={2}
           />
-      </div>  
+      </div>
       <HomeHighlighted rfkId={HIGHLIGHTED_ARTICLES_RFKID} />
       </>
   );

@@ -49,7 +49,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LanguageContext.Provider value={{ language, setLanguage }}>
             <DataBar />
-            <div className="bg-white dark:bg-gray-700">
+            <div className="bg-white">
               <WidgetsProvider 
                 env={SEARCH_CONFIG.env}
                 customerKey={SEARCH_CONFIG.customerKey}
@@ -58,7 +58,7 @@ export default function RootLayout({
               >
                 <SEOWidget rfkId={'demo_search_seo'} />
                 <Header />
-                <main className="w-full m-auto pt-[100px] min-h-[700px] bg-white dark:bg-gray-700">
+                <main className="w-full m-auto pt-[100px] min-h-[700px] bg-white">
                   {children}
                 </main>
                 <Footer />
