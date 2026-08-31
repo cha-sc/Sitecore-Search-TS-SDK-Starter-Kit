@@ -22,7 +22,7 @@ function extract(request, response) {
       'name': $('meta[name="searchtitle"]').attr('content') || $('meta[name="title"]').attr('content') || $('meta[property="og:title"]').attr('content') || $('title').text(),
       'type': page_type,
       'url': url,
-      'image_url': $('meta[property="og:image"]').attr('content') || 'https://www.midflorida.com/-/media/feature/midflorida/siteasset/logo-new.svg'
+      'image_url': 'https://www.midflorida.com' + $('div.container-main div div.hero-main img').first().attr('src') || $('meta[property="og:image"]').attr('content') ||  'https://www.midflorida.com/-/media/feature/midflorida/siteasset/logo-new.svg'
     }];
   }
 
