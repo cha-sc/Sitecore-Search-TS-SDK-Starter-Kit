@@ -26,7 +26,7 @@ export const DEFAULT_QUESTION = 'what is sitecore?'
 export const HIGHLIGHTED_ARTICLES_RFKID = 'search_home_highlight_articles'
 
 // Change if you want to show a different content type in the highlighted articles widget. This value is case-sensitive. Default is website_content.
-export const HIGHLIGHTED_ARTICLES_CONTENT_TYPE = 'Website Content'
+export const HIGHLIGHTED_ARTICLES_CONTENT_TYPE = 'Resources'
 
 // Change if you want a different image to display if the index does not contain an image. Default is https://placehold.co/500x300?text=No Image
 export const DEFAULT_IMG_URL = 'https://placehold.co/500x300?text=No Image';

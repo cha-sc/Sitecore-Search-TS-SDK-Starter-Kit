@@ -19,11 +19,11 @@ const SuggestionBlock = ({ items, title, blockId, filterAttribute, disabled }: S
   return (
     <>
       {items.length > 0 && (
-        <PreviewSearch.SuggestionsGroup className="flex flex-1 flex-col" id={blockId} filterAttribute={filterAttribute}>
+        <PreviewSearch.SuggestionsGroup className="flex flex-1 flex-col p-2" id={blockId} filterAttribute={filterAttribute}>
           <h2 className="box-border pl-1 block text-lg font-bold m-2">{title}</h2>
           {items.map(({ text }) => (
             <PreviewSearch.SuggestionTrigger
-              className="cursor-pointer p-2 text-sm data-[state=active]:outline-none data-[state=active]:text-gray-900 data-[state=active]:bg-white focus:outline-none focus:bg-white focus:text-bold hover:outline-none hover:text-gray-900 hover:bg-white "
+              className="cursor-pointer mb-2 rounded-md border border-card-edge bg-white p-2 text-sm transition-shadow duration-200 ease-linear data-[state=active]:outline-none data-[state=active]:text-card-title data-[state=active]:shadow-[6px_6px_0_0_var(--color-card-accent)] focus:outline-none focus:text-card-title focus:shadow-[6px_6px_0_0_var(--color-card-accent)] hover:outline-none hover:text-card-title hover:shadow-[6px_6px_0_0_var(--color-card-accent)]"
               id={text}
               key={text}
               asChild

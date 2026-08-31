@@ -44,6 +44,7 @@ export const ArticleDetailComponent = ({ id }: ArticleDetailProps): JSX.Element 
         <div className="max-w-[50%] min-h-[300px] flex items-center flex-col">
           <h1 className="text-2xl font-bold text-gray-700 w-full mb-3 mt-4">{mainArticle.name}</h1>
           <div className="text-left text-md text-gray-700">{mainArticle?.subtitle}</div>
+          <div className="text-left text-md text-gray-700">{mainArticle?.type}</div>
           <div className="text-left leading-tight text-base text-gray-700">{mainArticle?.description}</div>
         </div>
         <div className="max-w-[50%] min-h-[300px] flex items-center">

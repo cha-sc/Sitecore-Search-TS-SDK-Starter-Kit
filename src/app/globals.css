@@ -12,6 +12,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Result card palette. Change these to re-brand the search result cards. */
+@theme {
+  --color-card-edge: #45776c;
+  --color-card-accent: #008573;
+  --color-card-title: #0f244b;
+  --color-card-body: #3b3b3b;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

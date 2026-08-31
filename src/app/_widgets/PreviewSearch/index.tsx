@@ -109,9 +109,9 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
                             onItemClick({ id: article.id, index, sourceId: article.source_id });
                             router.push('/detail/' + article.id);
                           }}
-                          className="flex box-border no-underline w-full text-black focus:shadow-md"
+                          className="flex box-border no-underline w-full text-black"
                         >
-                          <ArticleCard.Root className="w-full shadow-[2px_2px_4px_rgba(0,0,0,0.3)] rounded-md p-2 cursor-pointer block border-transparent border-solid border text-center focus-within:shadow-[2px_2px_4px_rgba(0,0,0,0.8)] hover:shadow-[2px_2px_4px_rgba(0,0,0,0.8)]">
+                          <ArticleCard.Root className="w-full rounded-md p-2 cursor-pointer block border border-card-edge border-solid bg-white text-center transition-shadow duration-200 ease-linear focus-within:shadow-[6px_6px_0_0_var(--color-card-accent)] hover:shadow-[6px_6px_0_0_var(--color-card-accent)]">
                             <div className="m-auto mb-[10px] relative h-[6em] flex justify-center items-center overflow-hidden">
                               <Image
                                 src={article.image_url}

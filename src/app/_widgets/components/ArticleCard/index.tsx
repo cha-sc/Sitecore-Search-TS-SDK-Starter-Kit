@@ -25,9 +25,9 @@ const ArticleItemCard = ({ className = '', article }: ArticleItemCardProps) => {
   return (
     <ArticleCard.Root
       key={article.id}
-      className={`group relative border border-gray-300 rounded-md hover:shadow-lg hover:scale-102 hover:transition-all hover:ease-linear hover:duration-300 focus-within:scale-102 focus-within:transition-all focus-within:ease-linear focus-within:duration-300 focus-within:hover:shadow-lg ${className}`}
+      className={`group relative flex flex-col overflow-hidden rounded-md border border-card-edge bg-white transition-shadow duration-200 ease-linear hover:shadow-[6px_6px_0_0_var(--color-card-accent)] focus-within:shadow-[6px_6px_0_0_var(--color-card-accent)] ${className}`}
     >
-      <div className="aspect-h-1 aspect-w-1 h-28 w-full overflow-hidden rounded-t-md bg-gray-200 sm:aspect-none">
+      <div className="aspect-h-1 aspect-w-1 h-28 w-full overflow-hidden bg-gray-200 sm:aspect-none">
         <Image
           src={validImageUrl}
           className="h-full w-full object-cover object-center lg:h-full lg:w-full"
@@ -44,11 +44,11 @@ const ArticleItemCard = ({ className = '', article }: ArticleItemCardProps) => {
           aria-label={`View details for ${articleTitle}`}
         >
           <span aria-hidden="true" className="absolute inset-0"></span>
-          <ArticleCard.Title className="mt-4 text-base h-[100px] overflow-hidden">
+          <ArticleCard.Title className="text-base font-bold text-card-title line-clamp-2">
             {articleTitle}
           </ArticleCard.Title>
         </Link>
-        <ArticleCard.Subtitle className="mt-3 text-sm text-gray-600">
+        <ArticleCard.Subtitle className="mt-3 text-xs uppercase tracking-wide text-card-body/70">
           {article.type}
         </ArticleCard.Subtitle>
       </div>
