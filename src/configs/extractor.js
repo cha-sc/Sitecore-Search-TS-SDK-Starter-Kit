@@ -21,14 +21,20 @@ function extract(request, response) {
       image_url = addBaseURL(image_url);
     }
 
-    var desc = $('body div.container-main div div.container-main');
-    if(desc.length > 0){
-      desc = concatText(desc).replace(/\s\s+/g, ' ').trim();
+    var desc, desc1 = $('body div.container-main div div.container-main'), desc2 = $('body div.container-main div div.blog-article');
+    if(desc1.length > 0){
+      desc = concatText(desc1).replace(/\s\s+/g, ' ').trim();
+    } else {
+      if(desc2.length > 0){
+        desc = concatText(desc2).replace(/\s\s+/g, ' ').trim();
+      } else {
+        desc = null;
+      }
     }
 
     // build the rest of the return object
     return [{
-      'subtitle': $('h1.hero-main-title').text() || '',
+      'subtitle': $('h1.hero-main-title').text() || $('h1.blog-header-title').text() || '',
       'description': desc || $('meta[property="og:description"]').attr('content') || $('meta[name="description"]').attr('content') || $('p').text(),
       'name': $('meta[name="searchtitle"]').attr('content') || $('meta[name="title"]').attr('content') || $('meta[property="og:title"]').attr('content') || $('title').text(),
       'type': page_type,
