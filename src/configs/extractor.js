@@ -34,7 +34,7 @@ function extract(request, response) {
 
     // build the rest of the return object
     return [{
-      'subtitle': $('h1.hero-main-title').text() || $('h1.blog-header-title').text() || '',
+      // 'subtitle': $('h1.hero-main-title').text() || $('h1.blog-header-title').text() || '', // while this is part of the example responses, it's not part of the content entity attributes o.0
       'description': desc || $('meta[property="og:description"]').attr('content') || $('meta[name="description"]').attr('content') || $('p').text(),
       'name': $('meta[name="searchtitle"]').attr('content') || $('meta[name="title"]').attr('content') || $('meta[property="og:title"]').attr('content') || $('title').text(),
       'type': page_type,
