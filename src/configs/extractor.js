@@ -16,13 +16,30 @@ function extract(request, response) {
     // normalize page type to title case
     page_type = titleCased(page_type);
 
+    var image_url = $('div.container-main div div.hero-main img').first().attr('src');
+    if(image_url){
+      image_url = addBaseURL(image_url);
+    }
+
+    var desc, desc1 = $('body div.container-main div div.container-main'), desc2 = $('body div.container-main div div.blog-article');
+    if(desc1.length > 0){
+      desc = concatText(desc1).replace(/\s\s+/g, ' ').trim();
+    } else {
+      if(desc2.length > 0){
+        desc = concatText(desc2).replace(/\s\s+/g, ' ').trim();
+      } else {
+        desc = null;
+      }
+    }
+
     // build the rest of the return object
     return [{
-      'description': $('meta[property="og:description"]').attr('content') || $('meta[name="description"]').attr('content') || $('p').text(),
+      // 'subtitle': $('h1.hero-main-title').text() || $('h1.blog-header-title').text() || '', // while this is part of the example responses, it's not part of the content entity attributes o.0
+      'description': desc || $('meta[property="og:description"]').attr('content') || $('meta[name="description"]').attr('content') || $('p').text(),
       'name': $('meta[name="searchtitle"]').attr('content') || $('meta[name="title"]').attr('content') || $('meta[property="og:title"]').attr('content') || $('title').text(),
       'type': page_type,
       'url': url,
-      'image_url': $('meta[property="og:image"]').attr('content') || 'https://www.midflorida.com/-/media/feature/midflorida/siteasset/logo-new.svg'
+      'image_url': image_url || $('meta[property="og:image"]').attr('content') ||  'https://www.midflorida.com/-/media/feature/midflorida/siteasset/logo-new.svg'
     }];
   }
 
@@ -34,4 +51,14 @@ function extract(request, response) {
     .split(' ')                                                 // split the sentence into an array of words
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))  // capitalize the first letter of each word
     .join(' ');                                                 // join the words back into a sentence
+  }
+
+  // helper function to add baseURL
+  function addBaseURL(url){
+    return 'https://www.midflorida.com' + url;
+  }
+
+  // helper function to concat all text from an array of selected elements
+  function concatText(elements){
+    return elements.map((index, element) => $(element).text()).get().join(' ');
   }
